@@ -173,15 +173,15 @@ $(window).on("resize", function () {
 
 <!-- original   var map = L.map('map').setView([27.295574, 31.026373], 6); -->
 	        var map = L.map('map').setView([45.423200, -75.696], 13);
-		L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {  
+		L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {  
 		
 
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18
 }).addTo(map);
 
-var nexrad = L.tileLayer.wms("http://http://warp.worldmap.harvard.edu/maps/wms/4152", {
-    layers: 'Ottawa Fire Insurance',
+var nexrad = L.tileLayer.wms("http://http://warp.worldmap.harvard.edu/maps/wms/", {
+    layers: '4512',
     format: 'image/png',
     transparent: true,
     attribution: "LAC"
