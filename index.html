@@ -171,29 +171,36 @@ $(window).on("resize", function () {
 <!-- Initiates Map and pulls data from .CSV --> 
 <script>
 
-	        var map = L.map('map').setView([45.423200, -75.696], 13);
-		L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {  
-		
+	    var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			mbUrl = 'http://warp.worldmap.harvard.edu/maps/tile/{id}/{z}/{x}/{y}.png';
 
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18
-}).addTo(map);
+	    var fireinsurance   = L.tileLayer(mbUrl, {id: '4152', attribution: mbAttr}),
+		ottawa1874  = L.tileLayer(mbUrl, {id: '4178',   attribution: mbAttr});
+		watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', attribution: mbAttr});
+		toner = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', attribution: mbAttr});
+			
+		var map = L.map('map', {
+			center: [45.423200, -75.696],
+			zoom: 10,
+			layers: [fireinsurance, ottawa1874]
+		});
+
+		var baseLayers = {
+			"Watercolor": watercolor,
+			"Toner": toner
+		};
+
+		var overlays = {
+			"Ottawa 1874": ottawa1874
+			"Ottawa Fire Insurance": fireinsurance
+		};
+
+		L.control.layers(baseLayers, overlays).addTo(map);
 
 
- var map = L.map('map').setView([45.423200, -75.696], 13);
-		L.tileLayer('http://warp.worldmap.harvard.edu/maps/tile/4152/{z}/{x}/{y}.png', {  
-		
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18
-}).addTo(map);
 
-
-
-
-var imageUrl = 'http://warp.worldmap.harvard.edu/uploads/4152/original/City_of_Ottawa_Insurance_Plan_1888-1901_2_of_113.jpg',
-    imageBounds = [[45.44291, -75.76687], [45.41002, -75.66301]];
-
-L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
 
 
