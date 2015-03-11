@@ -173,13 +173,16 @@ $(window).on("resize", function () {
 
 var map = L.map('map', {
     center: [45.423200, -75.696],
-    zoom: 6,
+    zoom: 13,
     layers:[
       L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png'),
       L.tileLayer('http://warp.worldmap.harvard.edu/maps/tile/4152/{z}/{x}/{y}.png')
     ]
 });
 
+<!-- the first tilelayer is our base map, the second one our georectified historical map layer 
+To add choosers and so on, you might want to examine this code http://homepage.ntlworld.com/keir.clarke/leaflet/time.htm
+-->
 
             //enter path for .csv here
             omnivore.csv('sites/aa-sites-popup.csv')
