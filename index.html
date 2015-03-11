@@ -171,7 +171,6 @@ $(window).on("resize", function () {
 <!-- Initiates Map and pulls data from .CSV --> 
 <script>
 
-<!-- original   var map = L.map('map').setView([27.295574, 31.026373], 6); -->
 	        var map = L.map('map').setView([45.423200, -75.696], 13);
 		L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {  
 		
@@ -179,6 +178,16 @@ $(window).on("resize", function () {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18
 }).addTo(map);
+
+
+ var map = L.map('map').setView([45.423200, -75.696], 13);
+		L.tileLayer('http://warp.worldmap.harvard.edu/maps/tile/4152/{z}/{x}/{y}.png', {  
+		
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18
+}).addTo(map);
+
+
 
 
 var imageUrl = 'http://warp.worldmap.harvard.edu/uploads/4152/original/City_of_Ottawa_Insurance_Plan_1888-1901_2_of_113.jpg',
