@@ -9,6 +9,10 @@ http://matrix-msu.github.io/daea/
 
 This version has been edited to be a 'clean' version that can be repurposed. Adding new sites is a matter of updating the 'Sites' csv file at [sites/aa-sites-popup.csv](/sites/aa-sites-popup.csv) to reflect your own materials. In that table, you can also provide a link to another page of detailed information, as per the template. The other element to adjust are your base maps. In the [index.html](index.html) page, you will want to change any lines of text to reflect your own purpose (such as on lines 46 and 48, as well as the various links: read the html carefully). You will also want to adjust lines 178 and 179 to point to your base map (178 uses the standar Stamen Toner map; replace ```L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'),``` with <br> ```L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png'),``` for instance to use the Stamen Watercolor base map). In 179 I am currently pointing to a georectified version of the Fire Insurance Map of Ottawa, hosted on the [Harvard Map Warper](http://warp.worldmap.harvard.edu/) site. Slot your own version in there.
 
+Adjust lines 175 and 176 so that they centre on your map. The higher the number for 'zoom', the closer in you are.
+
+Good luck!
+
 -------
 
 ###Original information about DAEA:
