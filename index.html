@@ -189,8 +189,8 @@ var map = L.map('map', {
                 marker.toGeoJSON().properties.link, {autoPanPadding: [5,55]});
         });
     })
-    
             .addTo(map);
+            
                         //enter path for .csv here
             omnivore.csv('sites/aa-sites-popup2.csv')
              .on('ready', function(layer) {
