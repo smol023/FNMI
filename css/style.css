@@ -9,6 +9,15 @@
 
 /* Sticky footer styles
 -------------------------------------------------- */
+/* Custom link appearance, you can use colorpicker.com to pick out the #value for the colors */
+
+a, a:hover, a:visited, a:active { font-weight:normal; /* make all links appears normal instead of bold */ }
+
+a { color: #0C85C2 !important; /* color of links */ }
+a:hover { color: #9B28FA !important; /* color of links when hover mouse over */ }
+a:active { color: #0C85C2 !important; /* color of links when active */ }
+a:visited { color: #0C85C2 !important; /* color of links after user has visited it */ }
+
 html {
   position: relative;
   min-height: 100%;
