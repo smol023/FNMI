@@ -3016,7 +3016,7 @@ fieldset[disabled] .btn-danger.active {
 }
 .btn-link {
   font-weight: normal;
-  color: #428bca;
+  color: #0000FF;
   cursor: pointer;
   border-radius: 0;
 }
@@ -3036,7 +3036,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #2a6496;
+  color: #0000FF;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3044,7 +3044,7 @@ fieldset[disabled] .btn-link {
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
-  color: #777;
+  colorL #0000FF;
   text-decoration: none;
 }
 .btn-lg,
