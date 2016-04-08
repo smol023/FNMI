@@ -211,7 +211,7 @@ th {
   }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #9370db;
 
     page-break-inside: avoid;
   }
@@ -243,14 +243,14 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #9370db !important;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important;
+    border-top-color: #9370db !important;
   }
   .label {
-    border: 1px solid #000;
+    border: 1px solid #9370db;
   }
   .table {
     border-collapse: collapse !important;
@@ -910,7 +910,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
+  color: #9370db;
   text-decoration: none;
 }
 a:hover,
