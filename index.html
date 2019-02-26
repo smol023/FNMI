@@ -6,7 +6,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Map of Canada's Wartime Atomic History</title>
+    <title>FNMI Resource Guide</title>
 
     
     <!-- Bootstrap core CSS -->
@@ -43,10 +43,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Welcome to my HIST3907O Final Project, A Mapping of Canada's Wartime Atomic History</h4>
+                        <h4 class="modal-title" id="myModalLabel">Welcome to our FNMI Resource Guide!</h4>
                     </div>
                     <div class="modal-body">
-                        <p>This map is designed to present readers with a visual representation of Canada's Wartime involvment in nuclear activity. By zooming in to each point, the reader can gain a better understanding into the locational context of nuclear activity in Canada. Clicking the markers will bring up a breif description on each site, and every site has a "More Details" link at the bottom, which will bring up more of the historical context and Canada's involvement with that specific lcoation, with the exception of Cominco located in Trail, Britich Columbia. </p>
+                        <p>TWe decided we would provide an interactive guide that provided a brief look into (continue to edit). By zooming in to each point, the reader can gain a better understanding into the locational context of FNMI history in Canada. Clicking the markers will bring up a breif description on each location, and every location has a "More Details" link at the bottom, which will bring up more of the historical context and Canada's involvement </p>
                         <p>This code all comes from The The Digital Atlas of Ancient Egypt, a digital cultural map of archaeological sites in Egypt (ranging from the Predynastic to the Roman period).  Collaboratively produced at Michigan State University during the Fall 2014 semester by the students registered in the Archaeology of Ancient Egypt class (ANP 455), the Digital Atlas of Ancient Egypt represents an experiment in applied digital archaeology undergraduate learning. This version was created by Sebastian Mol. </p> 
 
                     </div>
@@ -73,8 +73,8 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="http://sebastianmol7.github.io/daea/index.html">Map</a></li>
-                <li><a href="http://sebastianmol7.github.io/daea/paradata.html">Paradata</a></li>
+            <li><a href="http://smol023.github.io/daea/index.html">Map</a></li>
+                <li><a href="http://smol023.github.io/daea/paradata.html">Paradata</a></li>
               </ul>
             </li>
           </ul>
@@ -88,7 +88,7 @@
     <!-- FOOTER -->  
     <div class="footer">
       <div class="container">
-       <p class="text-muted"><img src="http://newsroom.carleton.ca/logos/CarletonWide_K_186.gif" alt="Carleton University Department of History"></p> 
+       <p class="text-muted"><img src="http://newsroom.carleton.ca/logos/CarletonWide_K_186.gif" alt="University of Ottawa Department of Education"></p> 
        </div>
     </div>
 
@@ -166,14 +166,17 @@ $(window).on("resize", function () {
 <!-- Initiates Map and pulls data from .CSV --> 
 <script>
 
-var map = L.map('map', {
-    center: [57.35, -88.35],
-    zoom: 4,
-    layers:[
-      L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'),
-     
-    ]
-});
+var map = L.map('map').setView([57.35, -88.35], 4);
+            L.tileLayer('https://a.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'matrix-msu.n75kekea',
+    accessToken: 'pk.eyJ1IjoibWF0cml4LW1zdSIsImEiOiJmU1NPbUFjIn0.MWCWCMSJ8Ar-6KZtNPzy4w'
+}).addTo(map);	
+	
+	
+	
+
 
             //enter path for .csv here
             omnivore.csv('sites/aa-sites-popup.csv')
